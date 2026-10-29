@@ -30,6 +30,8 @@ class Divisione(Operazione):
         super().__init__("divisione", dividendo, divisore)
 
     def esegui(self) -> float:
+        if self.valori[1] == 0:
+            raise ValueError("Non si puo dividere per zero")
         return self.valori[0] / self.valori[1]
 
 
