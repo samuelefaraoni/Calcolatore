@@ -44,3 +44,11 @@ class Moltiplicazione(Operazione):
         for valore in self.valori:
             risultato *= valore
         return risultato
+
+class Calcolatore:
+    def __init__(self) -> None:
+        self.nome = "calcolatore"
+
+    def esegui(self, operazione: Operazione):
+        risultato = operazione.esegui()
+        return risultato
